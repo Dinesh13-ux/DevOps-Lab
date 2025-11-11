@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Registration Form</title>
+<script>
+function validate() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  if (!name || !email) {
+    alert("All fields are required!");
+    return false;
+  }
+  alert("Form submitted successfully!");
+  return true;
+}
+</script>
+</head>
+<body>
+<h3>Registration Form</h3>
+<form onsubmit="return validate()">
+  Name:<br><input type="text" id="name"><br><br>
+  Email:<br><input type="email" id="email"><br><br>
+  Event:<br>
+  <label><input type="radio" name="Event" value="Dance" checked> Dance</label>
+  <label><input type="radio" name="Event" value="Singing"> Songs</label>
+  <label><input type="radio" name="Event" value="Drama"> Drama</label><br><br>
+  <input type="submit" value="Register">
+</form>
+</body>
+</html>
